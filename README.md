@@ -1,17 +1,17 @@
 # mcp-kube-llm
-This open-source project provides an interface to test natural language queries against Kubernetes MCP server using llama.cpp.
+This open-source project provides an interface to test natural language queries against Kubernetes MCP server using [llama.cpp](https://github.com/ggml-org/llama.cpp?tab=readme-ov-file).
 
 ## Prerequisites
 
-### Step 1: Install llama.cpp Server
-Install and run a llama.cpp server. On macOs or Linux, you can use:
+### Step 1: llama-server
+Install and run llama-server. On macOs or Linux, you can use:
 
 ```
 brew install llama.cpp
 llama-server -m path/to/your/model
 ```
 
-For more details, refer to: [https://github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
+For more details, refer to: [https://github.com/ggml-org/llama.cpp/tree/master/tools/server](https://github.com/ggml-org/llama.cpp/tree/master/tools/server)
 
 ### Step 2: Install Kubernetes MCP Server
 Clone and build the Kubernetes-compatible MCP server:
