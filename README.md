@@ -1,50 +1,26 @@
-# mcp-kube-llm
-This open-source project provides an interface to test natural language queries against Kubernetes MCP server using [llama.cpp](https://github.com/ggml-org/llama.cpp?tab=readme-ov-file).
+# 📘 mcp-kube-llm
 
-## Prerequisites
+This open-source project provides an interface to test natural language queries against a Kubernetes MCP server using [llama.cpp](https://github.com/ggml-org/llama.cpp?tab=readme-ov-file).
 
-### Step 1: llama-server
-Install and run llama-server. On macOs or Linux, you can use:
+## 🧾 Installation Steps Overview
 
-```
-brew install llama.cpp
-llama-server -m path/to/your/model
-```
+| Step | Description                       | Command/Action                                                                                   | Notes                                                                                       |
+|------|-----------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| 1️⃣   | Install and run `llama-server`   | `brew install llama.cpp`  <br> `llama-server -m path/to/your/model`                             | For macOS/Linux. Replace with your own model path. <br> [Docs](https://github.com/ggml-org/llama.cpp/tree/master/tools/server) |
+| 2️⃣   | Install MCP Kubernetes server     | `git clone https://github.com/Flux159/mcp-server-kubernetes.git` <br> `cd mcp-server-kubernetes` <br> `bun install` | Builds the MCP server with Kubernetes compatibility.                                        |
+| 3️⃣   | Install Python dependencies      | `pip install -r requirements.txt`                                                                | Run from the root project directory.                                                        |
+| 4️⃣   | Set up configuration             | Edit `server_config.json` <br> Replace `/path/to/your/mcp-server-kubernetes/dist/index.js`      | Update the path to the built MCP server entrypoint.                                         |
+| 5️⃣   | Run the interface                | `python main.py`                                                                                 | Executes a sample query and shows model responses.                                          |
 
-For more details, refer to: [https://github.com/ggml-org/llama.cpp/tree/master/tools/server](https://github.com/ggml-org/llama.cpp/tree/master/tools/server)
+## 📤 Example Output
 
-### Step 2: Install Kubernetes MCP Server
-Clone and build the Kubernetes-compatible MCP server:
-
-```bash
-git clone https://github.com/Flux159/mcp-server-kubernetes.git
-cd mcp-server-kubernetes
-bun install
-```
-
-### Step 3: Install Python Dependencies
-From the project directory:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4: Set up Configuration
-Replace `/path/to/your/mcp-server-kubernetes/dist/index.js` with the correct path to the MCP server in `server_config.json`.
-
-### Step 5: Run the interface
-Run the following command to test a user query:
+When you run:
 
 ```bash
 python main.py
 ```
-You will see output showing:
-- The model's response without grammar constraints
-- The model's response with grammar constraints
-- Time taken for each query
 
-Depending on the hardware, the sample output will look like:
-
+You will see output similar to:
 ```
 Response without grammar:
 ...
