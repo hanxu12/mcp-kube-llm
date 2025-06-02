@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "kubernetes": {
+      "command": "node",
+      "args": [
+        ".../MCP/mcp-server-kubernetes/dist/index.js"
+      ]
+    }
+  }
+}
