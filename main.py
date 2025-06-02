@@ -22,6 +22,9 @@ async def main(config_file: str, profile: str, user_query: str):
         prompt = template \
             .replace("{{ TOOL DEFINITIONS IN JSON SCHEMA }}", json.dumps(tools_response, indent=2)) \
             .replace("{{ USER QUERY }}", user_query)
+        
+        # warm up 
+        _ = llm.query(prompt)
 
         # Unconstrained query
         start_plain = time()
