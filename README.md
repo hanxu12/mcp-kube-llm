@@ -1,6 +1,6 @@
 # 📘 mcp-kube-llm
 
-This open-source project demonstrates grammar-constrained decoding using [llama.cpp](https://github.com/ggml-org/llama.cpp?tab=readme-ov-file) to convert natural language queries into structured tool calls against Kubernetes MCP server.
+This open-source project demonstrates grammar-constrained LLM interface using [llama.cpp](https://github.com/ggml-org/llama.cpp?tab=readme-ov-file), which converts natural language queries into structured, low-latency AI outputs for a Kubernetes MCP server.
 
 ## 🧾 Installation Steps Overview
 
