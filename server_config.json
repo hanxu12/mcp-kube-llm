@@ -3,7 +3,7 @@
     "kubernetes": {
       "command": "node",
       "args": [
-        ".../MCP/mcp-server-kubernetes/dist/index.js"
+        "/path/to/your/mcp-server-kubernete/dist/index.js"
       ]
     }
   }

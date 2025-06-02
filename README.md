@@ -4,18 +4,22 @@ This open-source project provides an interface to test natural language queries 
 ## Prerequisites
 
 ### Step 1: Install llama.cpp Server
-Install and run a llama.cpp server. 
+Install and run a llama.cpp server. On macOs or Linux, you can use:
+
+```
+brew install llama.cpp
+```
 
 Refer to: [https://github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
 
 ### Step 2: Install Kubernetes MCP Server
-Clone and start the Kubernetes-compatible MCP server:
+Clone and build the Kubernetes-compatible MCP server:
 
 ```bash
 git clone https://github.com/Flux159/mcp-server-kubernetes.git
 cd mcp-server-kubernetes
+bun install
 ```
-Follow setup instructions in that repository to start the server.
 
 ### Step 3: Install Python Dependencies
 From the project directory:
@@ -24,19 +28,27 @@ From the project directory:
 pip install -r requirements.txt
 ```
 
-### Step 4: Run the interface
+### Step 4: Set up Configuration
+Replace `/path/to/your/mcp-server-kubernetes/dist/index.js` with the correct path to the MCP server in `server_config.json`.
+
+Run a model using the llama.cpp server. For example:
+
+```bash
+llama-server -m path/to/your/model
+```
+
+### Step 5: Run the interface
 Run the following command to test a user query:
 
 ```bash
 python main.py
 ```
 You will see output showing:
-- The generated prompt
 - The model's response without grammar constraints
 - The model's response with grammar constraints
 - Time taken for each query
 
-The sample output will look like:
+Depending on the hardware, the sample output will look like:
 
 ```
 Response without grammar:
