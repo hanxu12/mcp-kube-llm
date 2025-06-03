@@ -14,13 +14,14 @@ This open-source project demonstrates grammar-constrained LLM interface using [l
 
 ## 📤 Example Output
 
-When you run:
+Running the interface with:
 
 ```bash
 python main.py
 ```
+and selecting: `1. List all pods in the kube-system namespace`
 
-You will see output similar to:
+produces output like the following:
 ```
 Response without grammar:
 ...
