@@ -10,7 +10,7 @@ This open-source project demonstrates grammar-constrained LLM interface using [l
 | 2️⃣   | Install MCP Kubernetes server     | `git clone https://github.com/Flux159/mcp-server-kubernetes.git` <br> `cd mcp-server-kubernetes` <br> `bun install` | Builds the Kubernetes MCP server.                                        |
 | 3️⃣   | Clone Project and Install Dependencies      | `https://github.com/hanxu12/mcp-kube-llm.git` <br> `pip install -r requirements.txt`                                                                | Run from the root project directory.                                                        |
 | 4️⃣   | Set up configuration             | Edit `server_config.json` <br> Replace `/path/to/your/mcp-server-kubernetes/dist/index.js`      | Update the path to the built MCP server entrypoint.                                         |
-| 5️⃣   | Run the interface                | `python main.py`                                                                                 | Executes a sample query and see outputs.                                          |
+| 5️⃣   | Run the interface                | `python main.py`                                                                                 | Interactively select or enter query and check structured output.                                          |
 
 ## 📤 Example Output
 
